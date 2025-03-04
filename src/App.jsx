@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Attendance from "./components/Attendance";
 import Atrecord from "./components/Atrecord";
 import { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -38,6 +38,7 @@ function App() {
       <Navbar />
       <div className="container mt-4">
         <Routes>
+        <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Student" element={<Student data={students} addStudent={addStudent} />} />
           <Route path="/About" element={<About />} />
